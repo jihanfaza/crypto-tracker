@@ -7,7 +7,7 @@
 ## Live Demo
 
 View the project live on GitHub Pages:
-**[https://yourusername.github.io/crypto-tracker](https://yourusername.github.io/crypto-tracker)**
+**[https://jihanfaza.github.io/crypto-tracker](https://yourusername.github.io/crypto-tracker)**
 
 ---
 
@@ -44,7 +44,3 @@ This project is licensed under the [MIT License](LICENSE).
 * [CoinGecko](https://www.coingecko.com) for free cryptocurrency data
 * [Chart.js](https://www.chartjs.org/) for elegant chart rendering
 * [Font Awesome](https://fontawesome.com/) for icon support
-
----
-
-Let me know if you’d like me to tailor this further for a specific job application, internship, or portfolio showcase.
