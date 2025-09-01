@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Crypto Tracker - Interactive Data Visualization</title>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-chart-line"></i> Crypto Tracker</h1>
+            <p class="subtitle">Interactive cryptocurrency data visualization</p>
+        </header>
+
+        <div class="controls">
+            <div class="coin-selector">
+                <i class="fas fa-coins"></i>
+                <select id="coinSelect">
+                    <option value="bitcoin">Bitcoin</option>
+                    <option value="ethereum">Ethereum</option>
+                    <option value="cardano">Cardano</option>
+                    <option value="solana">Solana</option>
+                    <option value="dogecoin">Dogecoin</option>
+                </select>
+            </div>
+
+            <div class="time-selector">
+                <i class="fas fa-calendar-alt"></i>
+                <select id="timeSelect">
+                    <option value="7">7 Days</option>
+                    <option value="14" selected>14 Days</option>
+                    <option value="30">30 Days</option>
+                    <option value="90">90 Days</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="coin-info">
+            <img id="coinIcon" src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579" class="coin-icon" alt="Bitcoin">
+            <div>
+                <h2 id="coinName" class="coin-name">Bitcoin</h2>
+                <div id="coinSymbol" class="coin-symbol">BTC</div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="priceChart"></canvas>
+            <div class="loader" id="chartLoader">
+                <i class="fas fa-spinner fa-spin"></i>
+                <div>Loading chart data...</div>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-title">Current Price</div>
+                <div class="stat-value" id="currentPrice">$0.00</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">24h Change</div>
+                <div class="stat-value" id="priceChange">0.00%</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Market Cap</div>
+                <div class="stat-value" id="marketCap">$0.00</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Trading Volume</div>
+                <div class="stat-value" id="volume">$0.00</div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Data provided by <a href="https://www.coingecko.com/" target="_blank" style="color: #00c9ff;">CoinGecko API</a></p>
+            <p>© 2025 Crypto Tracker - Interactive Data Visualization</p>
+        </footer>
+    </div>
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+</body>
+</html>
